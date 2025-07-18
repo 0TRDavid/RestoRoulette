@@ -16,7 +16,7 @@ export default function HeaderBar() {
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
-            width: '97.5%',
+            width: '97.3%',
             paddingLeft: '0px',
             paddingRight: '0px'
           }}
