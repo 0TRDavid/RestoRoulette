@@ -45,7 +45,7 @@ export default function WheelPage() {
   };
 
   return (
-    <Box sx={{ mt: 1, height: '88vh', display: 'grid', gridTemplateColumns: '250px 1fr', gap: 1 }}>
+    <Box sx={{ mt: 1, height: '88vh', display: 'grid', gridTemplateColumns: '500px 1fr', gap: 1 }}>
       {/* Sidebar Controls */}
       <Paper elevation={3} sx={{ p: 2, display: 'flex', flexDirection: 'column', height: '100%' }}>
         <RestaurantList restaurants={restaurants} enabledIds={enabledIds} onToggle={toggle} />
