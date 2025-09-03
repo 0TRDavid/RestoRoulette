@@ -56,7 +56,7 @@ export default function TemporaryDrawer() {
       <Box sx={{ mt: 'auto', p: 2 }}>
         <Divider sx={{ mb: 1 }} />
         <Typography variant="caption" color="text.secondary">
-          © 2025 Service Data LPA
+          © 2025 Service SI-Data LPA
         </Typography>
       </Box>
     </Box>

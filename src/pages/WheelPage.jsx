@@ -3,6 +3,7 @@ import * as XLSX from 'xlsx';
 import { Box, Paper, Typography, Button } from '@mui/material';
 import RestaurantList from '../components/RestaurantList';
 import Wheel from '../components/Wheel';
+import Credit from '../components/credit';
 
 export default function WheelPage() {
   const [restaurants, setRestaurants] = useState([]);
@@ -84,6 +85,7 @@ export default function WheelPage() {
           </Typography>
         )}
       </Paper>
+      <Credit text={"Idée d'Hugo et conçu par David"} />
     </Box>
   );
 }
