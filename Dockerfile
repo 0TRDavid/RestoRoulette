@@ -1,20 +1,23 @@
-# Image Node officielle
+# Image de base Node.js
 FROM node:20
 
-# Crée le dossier de travail dans le container
+# Définir le répertoire de travail
 WORKDIR /app
 
-# Copie le package.json + lock pour installer les dépendances
-COPY package*.json ./
+# Copier package.json et package-lock.json pour profiter du cache Docker
+COPY package.json package-lock.json ./
 
-# Install des dépendances
+# Installer les dépendances
 RUN npm install
 
-# Copie le reste de ton projet
+# Copier le reste du code source
 COPY . .
 
-# Expose le port Vite
-EXPOSE 5173
+# Construire l'application pour la production
+RUN npm run build
 
-# Commande par défaut : lance Vite
-CMD ["npm", "run", "dev", "--", "--host"]
+# Exposer le port 5172
+EXPOSE 5172
+
+# Lancer le serveur Vite Preview sur le port 5171
+CMD ["npx", "vite", "preview", "--port", "5172", "--host"]
