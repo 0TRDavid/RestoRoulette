@@ -24,8 +24,8 @@ export default function RestaurantList({ restaurants, enabledIds, onToggle }) {
               sx={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: 2,
-                mb: 2,
+                gap: 1,
+                mb: 1,
               }}
             >
               <Checkbox

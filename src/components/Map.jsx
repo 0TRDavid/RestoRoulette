@@ -22,8 +22,8 @@ export default function RestoMap({ segments }) {
     <Box sx={{ width: '100%', height: '100%' }}>
       <MapContainer center={center} zoom={17} scrollWheelZoom style={{ width: '100%', height: '100%' }}>
         <TileLayer
-          attribution='&copy; CNES, Distribution Airbus DS, © Airbus DS, © PlanetObserver (Contains Copernicus Data) | &copy; Stadia Maps &copy; OpenMapTiles &copy; OpenStreetMap contributors'
-          url="https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.jpg"
+          attribution=' &copy; OpenStreetMap contributors'
+          url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
           minZoom={0}
           maxZoom={20}
         />

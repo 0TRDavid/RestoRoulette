@@ -1,0 +1,38 @@
+/* WheelPage.css */
+
+/* Conteneur principal */
+.wheelpage-container {
+  margin-top: 8px; /* mt: 1 */
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  gap: 10px; /* gap: 1 */
+  height: calc(100vh - 105px);
+}
+
+/* Panneau latéral gauche (RestaurantList + bouton) */
+.sidebar-paper {
+  padding: 14px; /* p: 2 */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Bouton "Tourner" */
+.spin-button {
+  margin-top: 10px; /* mt: 2 */
+}
+
+/* Message quand aucun resto n’est actif */
+.no-resto-text {
+  margin-top: 16px; /* mt: 2 */
+  text-align: center;
+}
+
+/* Zone de la roue */
+.wheel-paper {
+  padding: 14px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

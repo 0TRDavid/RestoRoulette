@@ -5,7 +5,6 @@ import MenuPage from './pages/MenuPage';
 import MapPage from './pages/MapPage';
 import WheelPage from './pages/WheelPage';
 import Header from './components/Header';
-import './App.css';
 
 export default function App() {
   return (

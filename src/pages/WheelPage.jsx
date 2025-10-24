@@ -4,6 +4,7 @@ import { Box, Paper, Typography, Button } from '@mui/material';
 import RestaurantList from '../components/RestaurantList';
 import Wheel from '../components/Wheel';
 import Credit from '../components/credit';
+import '../assets/WheelPage.css'; // 🔹 Import du CSS
 
 export default function WheelPage() {
   const [restaurants, setRestaurants] = useState([]);
@@ -46,32 +47,37 @@ export default function WheelPage() {
   };
 
   return (
-    <Box sx={{ mt: 1, height: '88vh', display: 'grid', gridTemplateColumns: '500px 1fr', gap: 1 }}>
+    <Box className="wheelpage-container">
       {/* Sidebar Controls */}
-      <Paper elevation={3} sx={{ p: 2, display: 'flex', flexDirection: 'column', height: '100%' }}>
-        <RestaurantList restaurants={restaurants} enabledIds={enabledIds} onToggle={toggle} />
+      <Paper elevation={3} className="sidebar-paper">
+        <RestaurantList
+          restaurants={restaurants}
+          enabledIds={enabledIds}
+          onToggle={toggle}
+        />
         {segments.length > 0 ? (
-          <Button variant="contained" color="primary" onClick={handleSpinClick} fullWidth sx={{ mt: 2 }}>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={handleSpinClick}
+            fullWidth
+            className="spin-button"
+          >
             Tourner
           </Button>
         ) : (
-          <Typography variant="body2" color="text.secondary" align="center" sx={{ mt: 2 }}>
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            className="no-resto-text"
+          >
             Activez au moins un resto
           </Typography>
         )}
       </Paper>
 
       {/* Wheel Display */}
-      <Paper
-        elevation={3}
-        sx={{
-          p: 2,
-          height: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
+      <Paper elevation={3} className="wheel-paper">
         {segments.length > 0 ? (
           <Wheel
             segments={segments}
@@ -85,6 +91,7 @@ export default function WheelPage() {
           </Typography>
         )}
       </Paper>
+
       <Credit text={"Idée d'Hugo et conçu par David"} />
     </Box>
   );
